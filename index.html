@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        
+        #twitter_icon {
+            height: auto;
+        }
+        /* .navbar >.container {
+            padding-left: 15px;
+        } */
+        .navbar.navbar-light.bg-light {
+            background-color: #FFEFD5 !important;
+        }
+        body{
+            background-color: #FFEFD5 !important;
+            color: white;
+        }
+        
+        .nav-link {
+            color: black;
+        }
+        .nav-link:hover{
+            color: #FAF0E6;
+            border-color: cornflowerblue;
+            background-color: #6495ED;
+        }
+        .nav-img {
+            margin-right: 10px;
+        }
+        .btn.btn-primary {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
+            background-color: #6495ED;
+        }
+        .main-box-row-1 { 
+            color: black;
+            font-weight: bold;
+            padding: 15px;
+            border-right: 1px solid #D3D3D3;
+            border-left: 1px solid #D3D3D3;
+            border-bottom: 1px solid #D3D3D3;
+        }
+        .main-box-row-2 {
+            border-right: 1px solid #D3D3D3;
+            border-left: 1px solid #D3D3D3;
+            border-bottom: 1px solid #D3D3D3;
+            height: 180px;
+        }
+        .main-box-img {
+            float: right;
+        }
+        .main-photo {
+            border: 1px solid black;
+            margin: 15px 15px;
+            float: left;
+        }
+        #message-status {
+            background-color: #FFEFD5;
+            border: none;
+            color: #778899;
+            font-size: 24px;
+            padding-top: 30px;
+        }
+        #message-status:hover {
+            border: none;
+        }
+        .main-box-row-2-icons{
+            margin-top: 20px;
+            margin-left: 102px;
+        }
+        .icon {
+            margin-right: 15px;
+            margin-bottom: 20px;
+        }
+        #btn-col-main {
+            width: 20%;
+            float: right;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            margin-top: -25px;
+            opacity: 50%;
+        }
+        .bg-danger{
+            margin-left: -25px;
+            margin-top: 3px;
+            background-color: #6495ED !important;
+        }
+        .navbar{
+            background-color: #DCDCDC;
+        }
+        .navbar-brand {
+            margin-left: 15px;
+            color: #696969;
+        }
+        .navbar-col-3-row-2 {
+            padding-top: 10px;
+            margin-top: 20px;
+            background-color: #DCDCDC;
+            list-style: none;
+            border-radius: 15px;
+        }
+        .navbar-col-3-row-1-img {
+            margin-right: 15px;
+        }
+        .navbar-col-3-row-2-header{
+            color: black;
+            margin-left: 10px;
+        }
+        .navbar-col-3-row-2-img {
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 ">
+                <nav class="navbar navbar-light bg-light">
+                    <ul class="nav flex-column">
+                        <div>
+                            <a class="navbar-brand" href="#">
+                              <img 
+                                  src="https://img.icons8.com/material-rounded/24/000000/twitter-squared.png"
+                                  alt="A Twiter Icon"
+                              />
+                            </a>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <img 
+                                    class="nav-img"
+                                    src="https://img.icons8.com/material-rounded/24/000000/home.png"
+                                    alt="A Home Icon"
+                                /> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img 
+                                    class="nav-img"
+                                    src="https://img.icons8.com/material-rounded/24/000000/hashtag-2.png"
+                                    alt="An Explore Icon"
+                                /> Explore
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- <button type="button" class="btn btn-primary position-relative">
+                                Notifications
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                  20+
+                                  <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </button> -->
+                            <a class="nav-link" href="#">
+                                <img 
+                                    class="nav-img"
+                                    src="https://img.icons8.com/material-outlined/24/000000/camera-icon-with-face.png"
+                                    alt="A Notifications Icon"
+                                />
+                                <span class="position-absolute  translate-middle badge rounded-pill bg-danger">
+                                    20+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span> Notifications
+    
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <img 
+                                    class="nav-img"
+                                    src="https://img.icons8.com/material-outlined/24/000000/chat--v1.png"
+                                    alt="A Messages Icon"
+                                /> Messages
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img 
+                                    class="nav-img"
+                                    src="https://img.icons8.com/fluency-systems-regular/24/000000/bookmark-three.png"
+                                    alt="A Bookmarks Icon"
+                                /> Bookmarks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img 
+                                    class="nav-img"
+                                    src="https://img.icons8.com/material-outlined/24/000000/wish-list.png"
+                                    alt="A Lists Icon"
+                                /> Lists
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img 
+                                    class="nav-img"
+                                    src="https://img.icons8.com/material-rounded/24/000000/cat-profile.png"
+                                    alt="A Profile Icon"
+                                /> Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img 
+                                    class="nav-img"
+                                    src="https://img.icons8.com/material-rounded/24/000000/connection-status-off.png"
+                                    alt="A More Icon"
+                                /> More
+                            </a>
+                        </li>
+                        <button type="button" class="btn btn-lg btn-primary rounded-pill">Tweet</button>
+                    </ul>
+                    
+                </nav>
+
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropup
+                    </button>
+                    <div class="dropdown-menu">
+                      <!-- Dropdown menu links -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="main-box-row-1">
+                    <h4>Home
+                        <img 
+                            class="main-box-img"
+                            src="https://img.icons8.com/material-outlined/24/000000/sparkling.png"
+                            alt="A Favorite Icon"
+                        />
+                    </h4>
+                </div>
+                <div class="main-box-row-2">
+                    <img 
+                        class="main-photo rounded-circle"
+                        src="https://img.icons8.com/dusk/64/000000/cat.png"
+                        alt="My photo"
+                    />
+                    <textarea name="status" id="message-status" cols="30" rows="2"> What's happening?</textarea> <br>
+                    <div class="main-box-row-2-icons">
+                        <img 
+                            class="icon"
+                            src="https://img.icons8.com/material-sharp/24/000000/picture.png"
+                            alt="A Picture icon"
+                        />
+                        <img 
+                            class="icon"
+                            src="https://img.icons8.com/material-outlined/24/000000/gif.png"
+                            alt="A GIF icon"
+                        />
+                        <img 
+                            class="icon"
+                            src="https://img.icons8.com/material-outlined/24/000000/statistic-document.png"
+                            alt="A statistic icon"
+                        />
+                        <img 
+                            class="icon"
+                            src="https://img.icons8.com/material-outlined/24/000000/anime-emoji--v1.png"
+                            alt="An Emojii icon"
+                        />
+                        <img 
+                            class="icon"
+                            src="https://img.icons8.com/material-two-tone/24/000000/sign-up-in-calendar.png"
+                            alt="A kalendar icon"
+                        />
+                        <div id="btn-col-main">
+                            <button type="button" class="btn btn-lg btn-primary rounded-pill" >Tweet</button>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3">
+                <nav class="navbar rounded-pill">
+                    <a class="navbar-brand" href="#">
+                        <img 
+                            src="https://img.icons8.com/material-outlined/24/000000/search--v1.png"
+                            alt="A Search icon"
+                            class="navbar-col-3-row-1-img"
+                        />
+                    Search Twitter
+                    </a>
+                </nav>
+
+                <ul class="navbar-col-3-row-2">
+                    <div>
+                        <h4 class="navbar-col-3-row-2-header">Trends for you
+                            <img 
+                                src="https://img.icons8.com/material-outlined/24/000000/settings--v1.png"
+                                alt="A Settings icon"
+                                class="navbar-col-3-row-2-img"
+                            />
+                        </h4>
+                        
+                    </div>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-rounded/24/000000/home.png"
+                                alt="A Home Icon"
+                            /> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-rounded/24/000000/hashtag-2.png"
+                                alt="An Explore Icon"
+                            /> Explore
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="#">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-outlined/24/000000/camera-icon-with-face.png"
+                                alt="A Notifications Icon"
+                            />
+                            <span class="position-absolute  translate-middle badge rounded-pill bg-danger">
+                                20+
+                                <span class="visually-hidden">unread messages</span>
+                            </span> Notifications
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-outlined/24/000000/chat--v1.png"
+                                alt="A Messages Icon"
+                            /> Messages
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/fluency-systems-regular/24/000000/bookmark-three.png"
+                                alt="A Bookmarks Icon"
+                            /> Bookmarks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-outlined/24/000000/wish-list.png"
+                                alt="A Lists Icon"
+                            /> Lists
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-rounded/24/000000/cat-profile.png"
+                                alt="A Profile Icon"
+                            /> Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-rounded/24/000000/connection-status-off.png"
+                                alt="A More Icon"
+                            /> More
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-col-3-row-2">
+                    <div>
+                        <h4 class="navbar-col-3-row-2-header">Who to follow
+                            <img 
+                                src="https://img.icons8.com/material-outlined/24/000000/settings--v1.png"
+                                alt="A Settings icon"
+                                class="navbar-col-3-row-2-img"
+                            />
+                        </h4>
+                        
+                    </div>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-rounded/24/000000/home.png"
+                                alt="A Home Icon"
+                            /> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img 
+                                class="nav-img"
+                                src="https://img.icons8.com/material-rounded/24/000000/hashtag-2.png"
+                                alt="An Explore Icon"
+                            /> Explore
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Messages
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Menu item</a></li>
+                      <li><a class="dropdown-item" href="#">Menu item</a></li>
+                      <li><a class="dropdown-item" href="#">Menu item</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
