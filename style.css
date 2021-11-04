@@ -32,6 +32,9 @@ body{
     border-color: cornflowerblue;
     background-color: #6495ED;
 }
+.nav-item:active{
+    color: black;
+}
 .nav-img {
     margin-right: 10px;
 }
@@ -48,7 +51,7 @@ body{
     font-size: 18px;
     padding: 4px;
 }
-.main-box-row-1 { 
+.home { 
     color: black;
     font-weight: bold;
     padding: 5px 15px;
@@ -57,43 +60,41 @@ body{
     top: 0;
     background-color: #FFEFD5;
 }
-.main-box-row-1 h6{
+.home h6{
     font-weight: bold;
 }
-.main-box-row-2 {
-    /* border-right: 1px solid #D3D3D3;
-    border-left: 1px solid #D3D3D3;
-    border-bottom: 1px solid #D3D3D3; */
-    height: 100px;
-}
-.main-box-img {
+.home-image {
     float: right;
+}
+.status-message {
+    /* height: 100px; */
+    border-bottom: 1px solid #D3D3D3;
 }
 .main-photo {
     border: 1px double #00008B;
-    margin: 10px;
+    margin: 10px 0 10px 10px;
     float: left;
     background-color: wheat;
 }
-#message-status {
+#message-status-box {
     background-color: #FFEFD5;
     border: none;
     color: #778899;
     font-size: 18px;
     padding-top: 20px;
     padding-bottom: 0;
+    margin-left: 7px;
 }
-#message-status:hover {
-    border: none;
+#message-status-box:focus {
+    outline: none;
 }
-#message-status:active {
-    border: none;
-}
-.main-box-row-2-icons{
+
+.message-status-icons{
     margin-top: 20px;
     margin-left: 70px;
+    margin-bottom: 15px;
 }
-.icon {
+.message-status-icon {
     margin-right: 10px;
 }
 #btn-col-main {
@@ -103,23 +104,77 @@ body{
     margin-top: -25px;
     opacity: 50%;
 }
-.main-box-row-3 {
+.tweet{
     border-bottom: 1px solid #D3D3D3;
+    overflow: hidden;
 }
-.main-box-row-3-photo-box{
+.tweet-photobox{
     float: left;
-    width: 15%;
+    width: 11%;
 }
-.main-box-row-3-line{
-    margin-top: -14px;
+.row-3-line{
+    margin-top: -5px;
     margin-left: 9px;
+}
+.row-3-header{
+    color: black;
+    font-weight: bold;
+    margin-top: 7px;
 }
 .main-photo-mini{
     border: 1px double #00008B;
-    margin: 10px;
+    margin: 5px 10px 10px 21px;
     float: left;
     background-color: wheat;
 }
+.row-3-checkicon{
+    float: left;
+    margin: 10px 3px 0 3px;
+}
+.row-3-paragragh {
+    color: grey;
+    font-size: 14px;
+    margin-top: 7px;
+}
+.row-3-infobox {
+    display: flex;
+}
+.row-3-infobox-three-dots{
+    color: black;
+    float: right;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.row-3-infobox-paragragh {
+    color: black;
+    font-size: 14px;
+    margin-bottom: -5px;
+}
+.row-3-icons {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.row-3-icon {
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.row-3-icon-value {
+    color: grey;
+    font-size: 14px;
+    margin-right: 75px;
+    
+}
+.row-3-button {
+    border: none;
+    background-color: #FFEFD5;
+    color: #6495ED;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: -5px;
+    margin-bottom: 5px;
+}
+
 .bg-danger{
     margin-left: -25px;
     margin-top: 3px;
@@ -199,6 +254,7 @@ body{
     color: white;
     border-radius: 30px;
     margin-right: 15px;
+    font-size: 14px;
 }
 .navbar-col-3-row-3-container-img {
     float: left;
@@ -218,6 +274,7 @@ body{
     color: gray;
     font-size: 10px;
 }
+
 .navbar-footer-right {
     float: right;
     position: fixed;
@@ -245,7 +302,7 @@ body{
     width: 230px;
     float: left;
     position: fixed;
-    left: 15px;
+    left: 10px;
     bottom: -10px;
     margin-left: 55px;
     background-color: #FFEFD5;
@@ -269,14 +326,15 @@ body{
     color: gray;
     font-size: 12px;
 }
-.footer a{
-    margin-right: 10px;
-    color: grey;
-    font-size: 12px;
-    text-decoration: none;
-   padding: 0;
+.footer {
+    margin-left: 18px;
+    margin-top: 0;
 }
-.footer p {
+.footer a{
+    margin-right: 5px;
     color: grey;
-    font-size: 12px;
+    font-size: 11px;
+    text-decoration: none;
+    padding: 0;
+    margin-top: 0;
 }
