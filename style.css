@@ -12,11 +12,13 @@
 body{
     background-color: #FFEFD5 !important;
     color: white;
-    width: 90%;
+    width: 95%;
     margin-left: 90px;
 }
 .col-md-6{
-    border: 1px solid #D3D3D3;
+    border-top: 1px solid #D3D3D3;
+    border-right: 1px solid #D3D3D3;
+    border-left: 1px solid #D3D3D3;
     padding-left: 0;
     padding-right: 0;
 }
@@ -24,8 +26,9 @@ body{
     margin-bottom: 15px;
 }
 
-.nav-link {
+.nav-link{
     color: black;
+    display: flex;
 }
 .nav-link:hover{
     color: #FAF0E6;
@@ -45,7 +48,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 115%;
+    width: 100%;
     margin-top: 15px;
     background-color: #6495ED;
     font-size: 18px;
@@ -149,11 +152,13 @@ body{
     color: black;
     font-size: 14px;
     margin-bottom: -5px;
+    margin-left: 70px;
 }
 .tweet-icons {
     display: flex;
     margin-top: 20px;
     margin-bottom: 10px;
+    margin-left: 70px;
 }
 .tweet-icon {
     margin-top: 3px;
@@ -176,7 +181,7 @@ body{
 }
 
 .bg-danger{
-    margin-left: -25px;
+    margin-left: 10px;
     margin-top: 3px;
     background-color: #6495ED !important;
 }
@@ -275,56 +280,59 @@ body{
     font-size: 10px;
 }
 
-.navbar-footer-right {
+.footer-right {
     float: right;
     position: fixed;
     right: 35px;
     bottom: 0;
-    width: 350px;
+    width: 300px;
     background-color: #FFEFD5;
     color: black;
     border-radius: 15px 15px 0 0 ;
     border: 2px solid #c0c0c0;
     border-bottom: none;
 }
-.navbar-footer-right h6{
+.footer-right h6{
     margin-bottom: 0;
     margin-top: 20px;
     margin-left: 20px;
     font-weight: bold;
 }
-.navbar-footer-right-image {
+.footer-right-image {
     float: right;
     margin: 20px 15px 5px 0;
 }
-.navbar-footer-left {
+.footer-left {
     color: black;
     width: 230px;
     float: left;
     position: fixed;
     left: 10px;
     bottom: -10px;
-    margin-left: 55px;
+    margin-left: 40px;
     background-color: #FFEFD5;
 }
-.navbar-footer-left svg{
+.footer-left svg{
     float: right;
     margin-right: 5px;
     color: black;
     margin-top: 25px;
 
 }
-.navbar-footer-left h6{
+.footer-left h6{
     margin-bottom: 0;
     margin-top: 20px;
     margin-left: 20px;
     font-weight: bold;
     font-size: 14px;
 }
-.navbar-footer-left p{
+.footer-left p{
     margin-bottom: 0;
     color: gray;
     font-size: 12px;
+}
+.main-photo-footer {
+    margin-right: 5px;
 }
 .footer {
     margin-left: 18px;
@@ -338,3 +346,13 @@ body{
     padding: 0;
     margin-top: 0;
 }
+@media screen and (max-width: 1024px) {
+    .nav-item__text {
+        display: none;
+    }
+    .col-md-2 {
+        width: 20%;
+        border-right: 1px solid #D3D3D3;
+        margin-bottom: 20px;
+    }
+  }
